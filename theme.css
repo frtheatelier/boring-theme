@@ -8,6 +8,59 @@ body {
 	--toggle-radius: 0px;
 	--toggle-thumb-radius: 0px;
 	--slider-thumb-radius: 0px;
+
+	--font-interface-theme: "Input Sans", "Franklin Gothic Book", Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
+	--font-text-theme: "Input Sans",  "Franklin Gothic Book", Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;
+	--font-monospace-theme: "Input Mono", "Fira Code", "Cascadia Code", "Source Code Pro", "Consolas", "Courier New", monospace;
+
+	--accent-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+}
+
+.theme-dark {
+  --background-primary: #1e1e1e;
+  --background-secondary: #1e1e1e;
+
+  --text-selection: #f5f5f5;
+	--text-highlight-bg: #f5f5f5;
+}
+
+.theme-light {
+  --background-primary: #ffffff;
+  --background-secondary: #ffffff;
+
+   --input-focus-border-color: Highlight;
+   --input-focus-outline: 1px solid Canvas;
+   --input-unfocused-border-color: transparent;
+   --input-disabled-border-color: transparent;
+   --input-hover-border-color: var(--accent-color);
+
+   --scrollbar-bg:	white;
+	--scrollbar-thumb-bg:#1e1e1e;
+	--scrollbar-active-thumb-bg: #1e1e1e;
+
+	--ribbon-background: #fefefe;
+	--ribbon-background-collapsed: #fefefe;
+
+	--divider-color: #1e1e1e;
+	--divider-color-hover: #1e1e1e;
+	--divider-width-hover: 2px;
+
+	--status-bar-background	: #f5f5f5;
+
+	/* --drag-ghost-background: #1e1e1e; */
+	--pill-color:#1e1e1e;
+
+	--text-selection: #1e1e1e;
+	--text-highlight-bg: #ffee00;
+
+	--pill-border-color: #1e1e1e;
+
+	--metadata-input-background-active: #eeeeee;
+
+	--nav-item-weight-hover: 500;
+	/* --nav-heading-weight: 1000; */
+	--nav-item-color-active: #f5f5f5;
+	--nav-item-background-active: #1e1e1e;
 }
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
@@ -31,4 +84,16 @@ svg * {
 
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+.CodeMirror-activeLine.CodeMirror-linebackground,
+.cm-active.cm-line {
+	/* GLight on obsidian forum */
+	background-color: #f5f5f5;
+	border-left: solid 1px var(--accent-color);
+}
+
+::selection {
+	background-color: var(--text-selection);
+	color: var(--background-primary);
 }
